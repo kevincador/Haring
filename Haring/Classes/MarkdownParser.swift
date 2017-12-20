@@ -80,6 +80,13 @@ open class MarkdownParser {
   open func parse(_ markdown: String) -> NSAttributedString {
     return parse(NSAttributedString(string: markdown))
   }
+    
+    open func elements() -> [MarkdownElement] {
+        var elements = [MarkdownElement]()
+        elements.append(contentsOf: defaultElements)
+        elements.append(contentsOf: customElements)
+        return elements
+    }
 
   open func parse(_ markdown: NSAttributedString) -> NSAttributedString {
     let attributedString = NSMutableAttributedString(attributedString: markdown)
@@ -87,10 +94,7 @@ open class MarkdownParser {
                                   range: NSRange(location: 0, length: attributedString.length))
     attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: color,
                                   range: NSRange(location: 0, length: attributedString.length))
-    var elements: [MarkdownElement] = escapingElements
-    elements.append(contentsOf: defaultElements)
-    elements.append(contentsOf: customElements)
-    elements.append(contentsOf: unescapingElements)
+    let elements = self.elements() + unescapingElements
     elements.forEach { element in
       if automaticLinkDetectionEnabled || type(of: element) != MarkdownAutomaticLink.self {
         element.parse(attributedString)
