@@ -94,7 +94,7 @@ open class MarkdownParser {
                                   range: NSRange(location: 0, length: attributedString.length))
     attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: color,
                                   range: NSRange(location: 0, length: attributedString.length))
-    let elements = escaping + self.elements() + unescapingElements
+    let elements = escapingElements + self.elements() + unescapingElements
     elements.forEach { element in
       if automaticLinkDetectionEnabled || type(of: element) != MarkdownAutomaticLink.self {
         element.parse(attributedString)
