@@ -1,5 +1,3 @@
-![Logo](https://raw.githubusercontent.com/davidlari/Haring/master/Resources/HaringLogo.png)
-
 Haring
 =========
 
@@ -10,24 +8,32 @@ Haring
 
 Haring is a customizable and extensible Markdown parser for iOS. It supports many of the standard Markdown elements through the use of Regular Expressions. It also allows customization of font and color attributes for all the Markdown elements.
 
-Haring was forked from Ivan Bruel's MarkdownKit which appears to be no longer maintained.
+Haring was forked from Ivan Bruel's [MarkdownKit](https://github.com/ivanbruel/MarkdownKit) which appears to be no longer maintained. You should be able to drop this in as a replacement very easily.
 
 Haring is named after PopArt artist [Keith Haring](https://en.wikipedia.org/wiki/Keith_Haring).
 
 ## Screenshot
 
-![Example](https://raw.githubusercontent.com/ivanbruel/MarkdownKit/master/Resources/MarkdownKitExample.png)
+![Example](https://raw.githubusercontent.com/davidlari/Haring/master/Resources/MarkdownKitExample.png)
 
 ## Installation
 
 ### Installation via CocoaPods
 
-Haring is available through [CocoaPods](http://cocoapods.org). CocoaPods is a dependency manager that automates and simplifies the process of using 3rd-party libraries like Haring in your projects. You can install CocoaPods with the following command:
+Haring is available through [CocoaPods](http://cocoapods.org). CocoaPods is a dependency manager that automates and simplifies the process of using 3rd-party libraries like Haring in your projects. To integrate Haring into your Xcode project using CocoaPods, simply add the following line to your pod:
 
 ```ruby
 pod 'Haring'
 ```
-Version 2.x supports Xcode 9 and Swift 4.
+Version 2.1.x supports Xcode 10 and Swift 4.2 SDK.
+
+Older versions are not updated but if you need to support older Swift versions see below.
+
+Version 2.0.x supports Xcode 9 and Swift 4.0 through 4.1x.
+
+```ruby
+pod 'Haring', '~> 2.0.0'
+```
 
 Version 1.5 supports Xcode 9 and Swift 3.2. If you need this, add the version:
 
@@ -38,7 +44,7 @@ pod 'Haring', '~> 1.5.0'
 Version 1.4 supports Xcode 8 and Swift 3.1. If you need this, add the version:
 
 ```ruby
-pod 'Haring', '\~> 1.4.0'
+pod 'Haring', '~> 1.4.0'
 ```
 
 Afterwards, run the following command:
