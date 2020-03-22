@@ -15,8 +15,8 @@ all the Markdown elements.
   s.source           = { :git => 'https://github.com/davidlari/Haring.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/davidlari'
 
-  s.ios.deployment_target = '8.0'
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
+  s.ios.deployment_target = '13.0'
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
   s.source_files = 'Haring/Classes/**/*'
   s.frameworks = 'UIKit'
 end
