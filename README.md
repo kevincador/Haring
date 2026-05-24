@@ -18,6 +18,18 @@ Haring is named after PopArt artist [Keith Haring](https://en.wikipedia.org/wiki
 
 ## Installation
 
+### Installation via Swift Package Manager
+
+In Xcode, choose File > Add Package Dependencies, enter this repository's URL,
+then add the `Haring` package product to your app target.
+
+If you keep this repository private, use the private SSH or HTTPS URL for your
+fork instead.
+
+```swift
+import Haring
+```
+
 ### Installation via CocoaPods
 
 Haring is available through [CocoaPods](http://cocoapods.org). CocoaPods is a dependency manager that automates and simplifies the process of using 3rd-party libraries like Haring in your projects. To integrate Haring into your Xcode project using CocoaPods, simply add the following line to your pod:
